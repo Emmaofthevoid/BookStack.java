@@ -1,28 +1,28 @@
 package UE4_BookingQueue;
 
-public class Booking
-{
+public class Booking {
     // *** Membervariablen ***
-    // TODO
+    private String bookingText;
+    private double amount;
+
 
     // *** Konstruktor ***
 
-    public Booking(String bookingText, double amount)
-    {
-        // TODO: Implementierung vervollständigen
+    public Booking(String bookingText, double amount) {
+        this.bookingText = bookingText;
+        this.amount = amount;
+
     }
 
     // *** Getter-Methoden ***
 
-    public String getBookingText()
-    {
+    public String getBookingText() {
         // TODO: Implementierung vervollständingen
-        return null;
+        return bookingText;
     }
 
-    public double getAmount()
-    {
+    public double getAmount() {
         // Implementierung offen
-        return 0.0;
+        return amount;
     }
 }

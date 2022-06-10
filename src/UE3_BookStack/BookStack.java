@@ -1,34 +1,45 @@
 package UE3_BookStack;
 
-public class BookStack
-{
+public class BookStack {
     // *** Membervariablen ***
-    // TODO
+    private Node top;
+
 
     // *** Getter- und Setter-Methoden ***
 
-    public Node getTop()
-    {
+    public Node getTop() {
         // TODO: Implementierung
-        return null;
+        return top;
     }
 
+    public void setTop(Node top) {
+        this.top = top;
+    }
+// *** Operationen ***
 
-    // *** Operationen ***
+    public void push(String bookTitle) {
+        Node newNode = new Node(bookTitle);
 
-    public void push(String bookTitle)
-    {
-        // TODO: Implementierung
+        newNode.setNextNode(top);
+        top = newNode;
+
+
     }
 
-    public String pop() throws StackEmptyException
-    {
-        // TODO: Implementierung
-        return null;
+    public String pop() throws StackEmptyException {
+        //fall 1 = stack ist leer
+        if (top == null) {
+            throw new StackEmptyException();
+
+        } else {
+            String returnString = top.getBookTitle(); //zwischenspeichern Wert
+            top = top.getNextNode();
+            return returnString;
+        }
+
     }
 
-    public int getCount()
-    {
+    public int getCount() {
         // TODO: Implementierung
         return 0;
     }

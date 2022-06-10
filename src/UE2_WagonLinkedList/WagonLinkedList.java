@@ -1,35 +1,82 @@
 package UE2_WagonLinkedList;
 
 public class WagonLinkedList {
-    // *** Membervariablen ***
-    // TODO
+  private   Node first;
+   private Node last;
 
     // *** Methoden ***
 
     public Node getFirst() {
-        // TODO
-        return null;
+        return first;
     }
 
     public void setFirst(Node first) {
-        // TODO
+        this.first = first;
     }
 
     public Node getLast() {
-        // TODO
-        return null;
+        return last;
     }
 
     public void setLast(Node last) {
-        // TODO
+        this.last = last;
     }
 
     void insertWagonAtFirstPos(String wagonId) {
-        // TODO
+
+        Node newNode = new Node();
+        newNode.setWagonId(wagonId);
+        // fall: liste ist noch leer
+        if(first==null){
+            first = newNode;
+            last = newNode;
+        }
+
+        // Fall : liste ist befüllt
+        else {
+            newNode.setNext(first);
+            first.setPrev(newNode);
+            first = newNode;
+        }
+//        Node newNode = new Node();
+//        newNode.getWagonId() = wagonId;
+//        newNode.getNext() = first;
+//        first.getPrev() = newNode;
+//       first = first.getPrev(); // oder newNode = first;
+
+
     }
 
     void removeWagonFromLastPos() {
-        // TODO
+        //fall 1 = liste ist leer
+        if (first == null) {
+            return;
+        }
+        //fall 2 = nur ein element
+      else if (first == last) {
+            first = null;
+            last = null;
+        }
+
+
+        //fall 3 = mehrere elemente
+        else {
+            //ohne hilfsvariable
+            last.getPrev().setNext(null);
+            last = last.getPrev();
+            //mit hilfsvariable
+            Node helpNode = last.getPrev();
+            helpNode.setNext(null);
+            last = helpNode;
+        }
+
+//        Node helpNode = first;
+//
+//        while (helpNode.getNext() != null) {
+//            helpNode = helpNode.getNext();
+//        }
+//        helpNode = helpNode.getPrev();
+       // helpNode.getNext() = null;
     }
 
     void printList() {

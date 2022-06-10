@@ -2,33 +2,35 @@ package UE2_WagonLinkedList;
 
 public class Node {
     // *** Membervariablen ***
-    // TODO
+   private String wagonId;
+    private Node next;
+  private   Node prev;
 
     // *** Getter- & Setter-Methoden ***
     public String getWagonId() {
-        // TODO
-        return null;
+
+        return wagonId;
     }
 
     public void setWagonId(String wagonId) {
-        // TODO
+        this.wagonId = wagonId;
     }
 
     public Node getNext() {
-        // TODO
-        return null;
+
+        return next;
     }
 
     public void setNext(Node next) {
-        // TODO
+        this.next = next;
     }
 
     public Node getPrev() {
-        // TODO
-        return null;
+
+        return prev;
     }
 
     public void setPrev(Node prev) {
-        // TODO
+        this.prev = prev;
     }
 }

@@ -20,7 +20,7 @@ public class TodoLinkedList {
     // *** Operationen ***
 
     public void appendTodoText(String todoText) {
-        // neuen Node schaffen
+        // neuen Node erschaffen
         Node newNode = new Node();
         newNode.setToDoText(todoText);
 

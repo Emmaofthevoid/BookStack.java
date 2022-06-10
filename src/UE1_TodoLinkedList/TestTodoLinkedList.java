@@ -6,7 +6,7 @@ public class TestTodoLinkedList {
 
         System.out.print("Start LinkedList: ");
         while (currentNode != null) {
-            System.out.print(currentNode.getTodoText() + "; ");
+            System.out.print(currentNode.getToDoText() + "; ");
             currentNode = currentNode.getNext();
         }
 
